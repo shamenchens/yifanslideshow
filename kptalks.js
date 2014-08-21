@@ -62,3 +62,10 @@ $(window).scroll(function(){
     }
   }
 });
+$('#kp_come_container img').click(function(){
+  $('#kp_popup').hide();
+  $('#kp_come_container').animate({
+    left: '-'+kp_width+'px'
+  }, kp_slide_speed, function() {
+  });
+});
