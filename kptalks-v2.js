@@ -2,6 +2,21 @@
   $.fn.kptalks = function(options) {
 
     var settings = $.extend({
+
+    }, options );
+
+    return (
+      var body = $(this);
+      body.append('<h1>test</h1>');
+    );
+
+  };
+}(jQuery));
+/*
+(function($) {
+  $.fn.kptalks = function(options) {
+
+    var settings = $.extend({
         img_source: 'http://unlimited.kptaipei.tw/images/kp.png',
         api_source: 'http://api.kptaipei.tw/v1/category/40?accessToken=kp53f568e77303e9.28212837',
         default_text: '你好，我是柯文哲'
@@ -135,3 +150,4 @@
     };
   };
 }(jQuery));
+*/
