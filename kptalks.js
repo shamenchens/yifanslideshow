@@ -43,7 +43,7 @@ $(window).scroll(function(){
   var window_h = $(window).height();
   var page_h = $(document).height();
 
-  if((scroll+window_h) > (page_h*0.8)) {
+  if((scroll+window_h) > page_h) {
     if($('#kp_come_container').css('left') == '-'+kp_width+'px') {
       $('#kp_come_container').animate({
         left: kp_left_distance
