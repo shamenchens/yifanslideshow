@@ -1,6 +1,5 @@
 var img_source = 'http://unlimited.kptaipei.tw/images/kp.png',
     api_source = 'http://api.kptaipei.tw/v1/category/40?accessToken=kp53f568e77303e9.28212837',
-    slide_effect = 'sneaky', // 可選設定：default, fast, slow, veryslow, jump, sneaky
     kp_height = 450, // 圖片高度
     kp_width = 466, // 圖片寬度
     kp_left_distance  = -130, // 滑入後的 left
@@ -45,68 +44,11 @@ $(window).scroll(function(){
 
   if((scroll+window_h) > (page_h*0.8)) {
     if($('#kp_come_container').css('left') == '-'+kp_width+'px') {
-      switch(slide_effect) {
-        //default, fast, slow, veryslow, jump, sneaky
-
-        case 'fast':
-          $('#kp_come_container').animate({
-            left: kp_left_distance+'px'
-          }, 100, function() {
-            $('#kp_popup').show();
-          });
-          break;
-
-        case 'slow':
-          $('#kp_come_container').animate({
-            left: kp_left_distance+'px'
-          }, 1000, function() {
-            $('#kp_popup').show();
-          });
-          break;
-
-        case 'veryslow':
-          $('#kp_come_container').animate({
-            left: kp_left_distance+'px'
-          }, 10000, function() {
-            $('#kp_popup').show();
-          });
-          break;
-
-        case 'jump':
-          $('#kp_come_container').css('bottom','-'+kp_height+'px').css('left',kp_left_distance+'px');
-          $('#kp_come_container')
-          .animate({bottom: 0}, 300)
-          .animate({bottom: '-10px'}, 50)
-          .animate({bottom: 0}, 50)
-          .animate({bottom: '-10px'}, 50)
-          .animate({
-            bottom: 0
-          }, 300, function() {
-            $('#kp_popup').show();
-          });
-          break;
-
-        case 'sneaky':
-          $('#kp_come_container')
-          .animate({left: '-'+(kp_width*0.54)+'px'}, 2000).delay(2000)
-          .animate({left: '-'+(kp_width*0.6)+'px'}, 1000).delay(1000)
-          .animate({left: '-'+(kp_width*0.54)+'px'}, 1000).delay(2000)
-          .animate({left: '-'+(kp_width*0.7)+'px'}, 2000).delay(1000)
-          .animate({
-            left: kp_left_distance+'px'
-          }, 3000, function() {
-            $('#kp_popup').show();
-          });
-          break;
-
-        default:
-          $('#kp_come_container').animate({
-            left: kp_left_distance+'px'
-          }, 500, function() {
-            $('#kp_popup').show();
-          });
-          break;
-      }
+      $('#kp_come_container').animate({
+        left: kp_left_distance+'px'
+      }, 100, function() {
+        $('#kp_popup').show();
+      });
     }
   }
   else {
