@@ -65,7 +65,7 @@ $('#kp_come_container img').click(function(){
   $('#kp_popup').hide();
   $('#kp_come_container').animate({
     left: '-'+(kp_width+10)+'px'
-  }, kp_slide_speed, function() {
+  }, 100, function() {
   });
 });
 $('#kx_close_popup').click(function(){
