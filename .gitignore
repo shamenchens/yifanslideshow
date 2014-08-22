@@ -4,3 +4,6 @@ _test.html
 src/kptalks-v2-test.css
 
 src/kptalks-v2-test.js
+firefox/kp-slide.xpi
+firefox/data/jquery-1.11.1.min.js
+firefox/data/kptalks-v1-min.js
