@@ -3,7 +3,7 @@ html,body{
 }
 #kp_come_container {
   position:fixed;
-  z-index: 200000;
+  z-index: 2000000;
 }
 #kp_come_container #kp_popup {
   padding: 20px;
