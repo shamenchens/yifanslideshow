@@ -25,7 +25,6 @@
           page_h = $(document).height();
       if((scroll+window_h) > (page_h*0.8)) {
         if(container.css('left') == '-'+settings.width+'px') {
-          loadData(settings);
           switch(settings.effect) {
             case 'fast':
               container.animate({
@@ -96,6 +95,7 @@
           container.animate({
             left: '-'+settings.width+'px'
           }, 100);
+          loadData(settings);
         }
       }
     });
@@ -107,6 +107,7 @@
     });
     close.click(function(){
       popup.hide();
+      loadData(settings);
     });
   };
 
