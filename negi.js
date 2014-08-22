@@ -177,7 +177,7 @@ function negi(window, document, undefined) {
                   _translate[2] = z + 'px';
 
                   transform = transform.replace(translate, 'translate3d('+_translate.join('px, ')+')');
-                  //transform = transform.replace(rotateZ, 'rotateZ('+r+'deg)');
+                  transform = transform.replace(rotateZ, 'rotateZ('+r+'deg)');
                   style = {};
                   style[__prefix+'transform'] = transform;
                   style['transform'] = style[__prefix+'transform'];
