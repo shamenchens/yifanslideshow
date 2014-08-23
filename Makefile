@@ -6,11 +6,11 @@ ADDONSDK_URL?=https://ftp.mozilla.org/pub/mozilla.org/labs/jetpack/$(ADDONSDK).t
 
 all: firefox/kp-slide.xpi
 
-firefox/kp-slide.xpi: $(ADDONSDK) firefox/data/jquery-1.11.1.min.js firefox/data/kptalks-v1-min.js firefox/lib/main.js
+firefox/kp-slide.xpi: $(ADDONSDK) firefox/data/jquery-1.11.1.min.js firefox/data/kptalks-v2-min.js firefox/data/kptalks-v2.css firefox/lib/main.js
 	cd $(ADDONSDK) && source bin/activate && cd $(PWD)/firefox && cfx xpi
 	@echo "Firefox extension has been generated to $@"
 
-run: firefox/data/jquery-1.11.1.min.js firefox/data/kptalks-v1-min.js
+run: firefox/data/jquery-1.11.1.min.js firefox/data/kptalks-v2-min.js firefox/data/kptalks-v2.css
 	cd $(ADDONSDK) && source bin/activate && cd $(PWD)/firefox && cfx run
 
 $(ADDONSDK):
@@ -19,8 +19,11 @@ $(ADDONSDK):
 firefox/data/jquery-1.11.1.min.js:
 	wget -O $@ http://code.jquery.com/jquery-1.11.1.min.js
 
-firefox/data/kptalks-v1-min.js: src/kptalks-v1-min.js
+firefox/data/kptalks-v2-min.js: src/kptalks-v2-min.js
+	cp $? $@
+
+firefox/data/kptalks-v2.css: src/kptalks-v2.css
 	cp $? $@
 
 clean:
-	rm -rf addon-sdk-* firefox/data/jquery-1.11.1.min.js firefox/data/kptalks-v1-min.js
+	rm -rf addon-sdk-* firefox/data/jquery-1.11.1.min.js firefox/data/kptalks-*
