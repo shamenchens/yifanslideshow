@@ -10,9 +10,9 @@ html,body{
   width: 300px; height:140px;
   position: absolute;
   z-index: 99999999;
-  -webkit-border-radius: 5px;
-  -moz-border-radius: 5px;
-  border-radius: 5px;
+  -webkit-border-radius: 8px;
+  -moz-border-radius: 8px;
+  border-radius: 8px;
   -webkit-box-shadow: rgba(0,0,0,.4) 0px 1px 5px -1px;
   box-shadow: rgba(0,0,0,.4) 0px 1px 5px -1px;
   background-color:beige;
@@ -25,6 +25,7 @@ html,body{
   text-align: center;
   font-size: 18px;
   line-height: 26px;
+  color: black;
   height: 115px;
   overflow-y: auto;
   text-algin: center;
@@ -35,6 +36,7 @@ html,body{
 #kp_come_container #kp_popup #kp_says p,
 #kp_come_container #kp_popup #kp_says span {
   padding: 0; margin: 0;
+  color: black;
   font-size: 18px; line-height: 26px;
 }
 #kp_come_container #kp_popup #kp_popup_arrow {
@@ -49,7 +51,7 @@ html,body{
   border-right-style: solid;
   border-right-color: beige;
   position: absolute;
-  left: -40px; top: 29.8%;
+  left: -40px; top: 29.5%;
 }
 #kp_come_container #kp_popup #kp_popup_arrow_shadow {
   width: 0px; height: 0px;
@@ -61,7 +63,7 @@ html,body{
   border-bottom-color: transparent;
   border-right-width: 40px;
   border-right-style: solid;
-  border-right-color: rgba(0,0,0,.4);
+  border-right-color: rgba(0,0,0,.1);
   position: absolute;
   left: -40px; top: 30%;
 }
@@ -78,9 +80,9 @@ html,body{
 }
 #kp_come_container #kx_close_popup{
   position: absolute;
-  right: 10px; top: 8px;
+  right: 12px; top: 10px;
   cursor: pointer;
-  color: #aaa;
+  color: #ccc;
 }
 .kp_readmore {
   color: brown;
