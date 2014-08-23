@@ -128,7 +128,7 @@
           link = '<a href="'+post.url+'" target="_blank" class="kp_readmore">了解更多柯文哲的政見</a>';
 
       title = (post.title).replace(/【柯p新政】/g,"");
-      content = stringReplace(post.content);
+      var content = stringReplace(post.content);
       content = content.split('</p>');
       if(content[1] == undefined)
         says = '<p id="kp_say_bighi">'+settings.default_text+'<br>我提出<br>「'+title.substring(2)+'」</p>'+link;
