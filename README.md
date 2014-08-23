@@ -18,3 +18,7 @@
 如果要產生 xpi addon 檔案，到專案目錄下打 `make` 即可，這個指令會下載 Firefox Addon SDK 與 jquery 並且打包成 xpi 檔案放到 `firefox/kp-slide.xpi`
 
 如果想要測試，請用 `make run`，會開啟一個新的 Firefox 視窗並且已經安裝好 addon。
+
+## 授權
+
+本專案採用 [BSD 授權](https://github.com/goooooooogle/kp/blob/gh-pages/LICENSE)
