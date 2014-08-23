@@ -20,7 +20,7 @@
 如果想要測試，請用 `make run`，會開啟一個新的 Firefox 視窗並且已經安裝好 addon。
 
 
-[image](http://i.imgur.com/43Mm5gW.png)
+![image](http://i.imgur.com/43Mm5gW.png)
 
 ## 授權
 
