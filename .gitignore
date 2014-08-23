@@ -8,3 +8,5 @@ firefox/kp-slide.xpi
 firefox/data/jquery-1.11.1.min.js
 firefox/data/kptalks-v1-min.js
 addon-sdk-*
+firefox/data/kptalks-v2-min.js
+firefox/data/kptalks-v2.css
