@@ -127,25 +127,31 @@
       var post = posts[Math.floor(Math.random()*(i-1))]
           link = '<a href="'+post.url+'" target="_blank" class="kp_readmore">了解更多柯文哲的政見</a>';
 
-      title = (post.title).replace(/【柯p新政】/g,"");
-      var content = stringReplace(post.content);
-      content = content.split('</p>');
-      if(content[1] == undefined)
+      var title = (post.title).replace(/【柯p新政】/g,"");
+      var content = stringReplace(post.plain_content);
+      content = content.split('\n');
+      if(content[1] == undefined){
         says = '<p id="kp_say_bighi">'+settings.default_text+'<br>我提出<br>「'+title.substring(2)+'」</p>'+link;
-      else
-        says = '<p id="kp_say_hi">'+settings.default_text+'</p>'+content[1]+'...'+link+'</p>';
+      }
+      else {
+        says = '<p id="kp_say_hi">'+settings.default_text+'</p>'+content[3]+content[4]+'...'+link+'</p>';
+      }
 
-      $('#kp_says').html(says).promise().done(function(){
+      $('#kp_says').scrollTop(0).html(says).promise().done(function(){
         $('p').removeAttr("style"); $('span').removeAttr("style");
       });
     });
   }
 
   function stringReplace(string){
-    return string.replace(/柯文哲/g,"我")
-      .replace(/台北市長參選人/g,"")
-      .replace(/我表示/g,"我認為")
-      .replace(/我指出/g,"我認為");
+    return string.replace(/柯文哲/g,'我')
+      .replace(/台北市長參選人/g,'')
+      .replace(/我表示/g,'我認為')
+      .replace(/我指出/g,'我認為')
+      .replace('今（29）日','')
+      .replace('「','')
+      .replace('」','')
+      .replace('柯P的主張我的政策主張','我主張');
   }
 
 }(jQuery));
