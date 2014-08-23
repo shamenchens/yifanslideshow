@@ -1,14 +1,17 @@
 # 柯 P 滑出來對你說政見 2.0
 
-## 使用範例
-
-[請點擊這裡](http://goooooooogle.github.io/kp/)
 
 ## 簡介
 
 本 Plugin 之內容與資訊來源，使用「[柯文哲野生官網 unlimited](http://unlimited.kptaipei.tw/)」所提供之 API 服務，讓您可以簡單、輕鬆地在 個人網站 或 網誌 中埋入「柯P彩蛋」，並讓更多人得以了解柯文哲之政見。
 
 更多相關說明，請參考 [柯文哲野生官網 unlimited](http://unlimited.kptaipei.tw/)
+
+
+## 使用範例
+
+[請點擊這裡](http://goooooooogle.github.io/kp/)
+
 
 ## Firefox Addon
 
