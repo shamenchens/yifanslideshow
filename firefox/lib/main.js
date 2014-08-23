@@ -1,4 +1,5 @@
 var buttons = require('sdk/ui/button/action');
+var pageMod = require('sdk/page-mod');
 var tabs = require('sdk/tabs');
 var self = require('sdk/self');
 
@@ -17,11 +18,12 @@ function handleClick(state) {
   tabs.open('http://kptaipei.tw/');
 }
 
-tabs.on('ready', function(tab) {
-  tab.attach({
-    contentScriptFile: [
-      self.data.url('jquery-1.11.1.min.js'),
-      self.data.url('kptalks-v1-min.js')
-    ]
-  });
+pageMod.PageMod({
+  include: '*',
+  contentStyleFile: self.data.url('kptalks-v2.css'),
+  contentScriptFile: [
+    self.data.url('jquery-1.11.1.min.js'),
+    self.data.url('kptalks-v2-min.js')
+  ],
+  contentScript: '$.kptalks();'
 });
