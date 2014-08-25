@@ -114,7 +114,7 @@
     kp_image.click(function(){
       var come_out_forever = {};
       come_out_forever[settings.enter_from] = '-'+(settings.width+10)+'px';
-      popup.hide();
+      popup.remove();
       container.animate(come_out_forever, 100);
     });
     close.click(function(){
