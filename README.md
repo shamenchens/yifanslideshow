@@ -22,6 +22,11 @@
 
 ![image](http://i.imgur.com/43Mm5gW.png)
 
+## Chrome Extension
+
+Build Chrome extension 稍微麻煩一點，請先到專案目錄下面打 `make chrome`，這個時候 jquery 跟 kptalks 的檔案會被複製到 chrome 目錄底下，這個時候請打開 Chrome -> 工具 -> 擴充功能，點選 `封裝擴充功能` 即可打包 chrome extension，詳情請見 Chrome 官網上面的[打包說明](https://developer.chrome.com/extensions/packaging)
+
+![Chrome extension screenshot](http://i.imgur.com/XFQASSG.png)
 
 ## 更新紀錄
 
