@@ -2,7 +2,7 @@
 <head>
   <meta charset="UTF-8" />
   <title>柯 P 滑出來對你說政見</title>
-  <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+  <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
   <style>
     html,body {
       height: 100%;
@@ -24,9 +24,22 @@
     }
   </style>
 
+
   <!-- kptalks -->
-  <link rel="stylesheet" href="../src/kptalks-v2.css">
-  <script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
+  <link rel="stylesheet" href="//goooooooogle.github.io/kp/src/kptalks-v2.css"></link>
+  <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+  <script src="//goooooooogle.github.io/kp/src/kptalks-v2-min.js"></script>
+  <script>
+    $(function(){
+      $.kptalks({
+        image:'../img/kp-blush.png',
+        effect:'sneaky',
+        default_text:'Hi，我是柯P',
+        width: 800,
+        height: 774,
+      });
+    });
+  </script>
   <script>
     (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
     (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
@@ -64,16 +77,6 @@
 
 </pre>
 </div>
-<script src="../src/kptalks-v2-min.js"></script>
-<script>
-  $.kptalks({
-    image:'../img/kp-blush.png',
-    effect:'sneaky',
-    default_text:'Hi，我是柯P',
-    width: 800,
-    height: 774,
-  });
-</script>
 </body>
 </html>
 
