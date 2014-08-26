@@ -25,5 +25,17 @@ firefox/data/kptalks-v2-min.js: src/kptalks-v2-min.js
 firefox/data/kptalks-v2.css: src/kptalks-v2.css
 	cp $? $@
 
+.PHONY: chrome
+chrome: chrome/jquery-1.11.1.min.js chrome/kptalks-v2-min.js chrome/kptalks-v2.css
+
+chrome/jquery-1.11.1.min.js:
+	wget -O $@ http://code.jquery.com/jquery-1.11.1.min.js
+
+chrome/kptalks-v2-min.js: src/kptalks-v2-min.js
+	cp $? $@
+
+chrome/kptalks-v2.css: src/kptalks-v2.css
+	cp $? $@
+
 clean:
-	rm -rf addon-sdk-* firefox/data/jquery-1.11.1.min.js firefox/data/kptalks-*
+	rm -rf addon-sdk-* firefox/data/jquery-1.11.1.min.js firefox/data/kptalks-* chrome/kptalks-* chrome/jquery-1.11.1.min.js
