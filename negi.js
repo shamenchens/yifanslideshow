@@ -96,16 +96,16 @@ function negi(window, document, undefined) {
   }
 
   var __negisrc = [
-          'img/donut-1.png',
-          'img/donut-2.png',
-          'img/donut-3.png',
-          'img/donut-4.png',
-          'img/donut-5.png',
-          'img/donut-6.png',
-          'img/donut-7.png',
-          'img/donut-8.png',
-          'img/donut-9.png',
-          'img/donut-10.png'
+          'http://goooooooogle.github.io/kp/img/donut-1.png',
+          'http://goooooooogle.github.io/kp/img/donut-2.png',
+          'http://goooooooogle.github.io/kp/img/donut-3.png',
+          'http://goooooooogle.github.io/kp/img/donut-4.png',
+          'http://goooooooogle.github.io/kp/img/donut-5.png',
+          'http://goooooooogle.github.io/kp/img/donut-6.png',
+          'http://goooooooogle.github.io/kp/img/donut-7.png',
+          'http://goooooooogle.github.io/kp/img/donut-8.png',
+          'http://goooooooogle.github.io/kp/img/donut-9.png',
+          'http://goooooooogle.github.io/kp/img/donut-10.png'
       ];
 
   var Negi = (function () {
