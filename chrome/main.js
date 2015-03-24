@@ -1,1 +1,1 @@
-$.kptalks();
+$.yifansays();

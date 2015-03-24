@@ -15,15 +15,15 @@ var button = buttons.ActionButton({
 });
 
 function handleClick(state) {
-  tabs.open('http://mozilla.com.tw/');
+  tabs.open('http://www.efan.tw/about.html');
 }
 
 pageMod.PageMod({
   include: '*',
-  contentStyleFile: self.data.url('kptalks-v2.css'),
+  contentStyleFile: self.data.url('yifansays.css'),
   contentScriptFile: [
     self.data.url('jquery-1.11.1.min.js'),
-    self.data.url('kptalks-v2.js')
+    self.data.url('yifansays.js')
   ],
   contentScript: '$.yifansays();'
 });

@@ -5,7 +5,7 @@
     var settings = $.extend({
         api: 'http://api.kptaipei.tw/v1/category/40?accessToken=kp53f568e77303e9.28212837',
         image: [
-          'http://i.imgur.com/wmqK8vM.png'
+          'https://raw.githubusercontent.com/shamenchens/yifanslideshow/gh-pages/img/yifan.png'
         ],
         talk: [
           '我也景仰 rex-san',

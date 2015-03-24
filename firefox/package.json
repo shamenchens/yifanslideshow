@@ -1,9 +1,9 @@
 {
-  "name": "kp-slide",
-  "title": "kp-slide",
-  "id": "jid1-K8XdQ6SIDnfJAA",
-  "description": "柯 P 滑出來對你說政見",
-  "author": "Yuren Ju",
+  "name": "yifan-slideshow",
+  "title": "yifan-slideshow",
+  "id": "jid1-orJzxh9N44PT4Q",
+  "description": "Yifan 滑出來對你說",
+  "author": "Yifan fans",
   "license": "BSD",
-  "version": "2.1"
+  "version": "0.1"
 }

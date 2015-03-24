@@ -4,13 +4,13 @@ ADDONSDK_VERSION?=1.17
 ADDONSDK?=addon-sdk-$(ADDONSDK_VERSION)
 ADDONSDK_URL?=https://ftp.mozilla.org/pub/mozilla.org/labs/jetpack/$(ADDONSDK).tar.gz
 
-all: firefox/kp-slide.xpi
+all: firefox/yifan-slideshow.xpi
 
-firefox/kp-slide.xpi: $(ADDONSDK) firefox/data/jquery-1.11.1.min.js firefox/data/kptalks-v2-min.js firefox/data/kptalks-v2.css firefox/lib/main.js
+firefox/yifan-slideshow.xpi: $(ADDONSDK) firefox/data/jquery-1.11.1.min.js firefox/data/yifansays.js firefox/data/yifansays.css firefox/lib/main.js
 	cd $(ADDONSDK) && source bin/activate && cd $(PWD)/firefox && cfx xpi
 	@echo "Firefox extension has been generated to $@"
 
-run: firefox/data/jquery-1.11.1.min.js firefox/data/kptalks-v2.js firefox/data/kptalks-v2.css
+run: firefox/data/jquery-1.11.1.min.js firefox/data/yifansays.js firefox/data/yifansays.css
 	cd $(ADDONSDK) && source bin/activate && cd $(PWD)/firefox && cfx run
 
 $(ADDONSDK):
@@ -19,23 +19,23 @@ $(ADDONSDK):
 firefox/data/jquery-1.11.1.min.js:
 	wget -O $@ http://code.jquery.com/jquery-1.11.1.min.js
 
-firefox/data/kptalks-v2.js: src/kptalks-v2.js
+firefox/data/yifansays.js: src/yifansays.js
 	cp $? $@
 
-firefox/data/kptalks-v2.css: src/kptalks-v2.css
+firefox/data/yifansays.css: src/yifansays.css
 	cp $? $@
 
 .PHONY: chrome
-chrome: chrome/jquery-1.11.1.min.js chrome/kptalks-v2-min.js chrome/kptalks-v2.css
+chrome: chrome/jquery-1.11.1.min.js chrome/yifansays.js chrome/yifansays.css
 
 chrome/jquery-1.11.1.min.js:
 	wget -O $@ http://code.jquery.com/jquery-1.11.1.min.js
 
-chrome/kptalks-v2-min.js: src/kptalks-v2-min.js
+chrome/yifansays.js: src/yifansays.js
 	cp $? $@
 
-chrome/kptalks-v2.css: src/kptalks-v2.css
+chrome/yifansays.css: src/yifansays.css
 	cp $? $@
 
 clean:
-	rm -rf addon-sdk-* firefox/data/jquery-1.11.1.min.js firefox/data/kptalks-* chrome/kptalks-* chrome/jquery-1.11.1.min.js
+	rm -rf addon-sdk-* firefox/data/jquery-1.11.1.min.js firefox/data/yifansays* chrome/yifansays* chrome/jquery-1.11.1.min.js
