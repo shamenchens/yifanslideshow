@@ -10,7 +10,7 @@ firefox/kp-slide.xpi: $(ADDONSDK) firefox/data/jquery-1.11.1.min.js firefox/data
 	cd $(ADDONSDK) && source bin/activate && cd $(PWD)/firefox && cfx xpi
 	@echo "Firefox extension has been generated to $@"
 
-run: firefox/data/jquery-1.11.1.min.js firefox/data/kptalks-v2-min.js firefox/data/kptalks-v2.css
+run: firefox/data/jquery-1.11.1.min.js firefox/data/kptalks-v2.js firefox/data/kptalks-v2.css
 	cd $(ADDONSDK) && source bin/activate && cd $(PWD)/firefox && cfx run
 
 $(ADDONSDK):
@@ -19,7 +19,7 @@ $(ADDONSDK):
 firefox/data/jquery-1.11.1.min.js:
 	wget -O $@ http://code.jquery.com/jquery-1.11.1.min.js
 
-firefox/data/kptalks-v2-min.js: src/kptalks-v2-min.js
+firefox/data/kptalks-v2.js: src/kptalks-v2.js
 	cp $? $@
 
 firefox/data/kptalks-v2.css: src/kptalks-v2.css

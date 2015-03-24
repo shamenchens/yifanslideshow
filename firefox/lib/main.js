@@ -15,7 +15,7 @@ var button = buttons.ActionButton({
 });
 
 function handleClick(state) {
-  tabs.open('http://kptaipei.tw/');
+  tabs.open('http://mozilla.com.tw/');
 }
 
 pageMod.PageMod({
@@ -23,7 +23,7 @@ pageMod.PageMod({
   contentStyleFile: self.data.url('kptalks-v2.css'),
   contentScriptFile: [
     self.data.url('jquery-1.11.1.min.js'),
-    self.data.url('kptalks-v2-min.js')
+    self.data.url('kptalks-v2.js')
   ],
-  contentScript: '$.kptalks();'
+  contentScript: '$.yifansays();'
 });

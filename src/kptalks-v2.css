@@ -1,11 +1,11 @@
 html,body{
   height: 100%;
 }
-#kp_come_container {
+#yifan_container {
   position:fixed;
   z-index: 99999999;
 }
-#kp_come_container #kp_popup {
+#yifan_container #yifan_popup {
   padding: 20px;
   width: 300px; height:140px;
   position: absolute;
@@ -17,7 +17,7 @@ html,body{
   box-sizing: initial;
   display: none;
 }
-#kp_come_container #kp_popup #kp_says {
+#yifan_container #yifan_popup #yifan_says {
   text-align: center;
   font-size: 18px;
   line-height: 26px;
@@ -28,43 +28,43 @@ html,body{
   -moz-box-sizing: initial;
   box-sizing: initial;
 }
-#kp_come_container #kp_popup #kp_says p,
-#kp_come_container #kp_popup #kp_says span {
+#yifan_container #yifan_popup #yifan_says p,
+#yifan_container #yifan_popup #yifan_says span {
   padding: 0; margin: 0;
   font-size: 18px; line-height: 26px;
 }
-#kp_come_container #kp_popup #kp_popup_arrow {
+#yifan_container #yifan_popup #yifan_popup_arrow {
   width: 0px; height: 0px;
   border-top: 15px solid transparent;
   border-bottom: 15px solid transparent;
   position: absolute;
   top: 29.5%;
 }
-#kp_come_container #kp_popup #kp_popup_arrow_shadow {
+#yifan_container #yifan_popup #yifan_popup_arrow_shadow {
   width: 0px; height: 0px;
   border-top: 15px solid transparent;
   border-bottom: 15px solid transparent;
   position: absolute;
   top: 30%;
 }
-#kp_come_container #kp_say_hi{
+#yifan_container #yifan_say_hi{
   padding: 0; margin: 0;
   font-size: 18px; line-height: 26px;
   padding-bottom: 5px;
   display: block;
 }
-#kp_come_container #kp_says #kp_say_bighi{
+#yifan_container #yifan_says #yifan_say_bighi{
   font-size: 22px;
   font-weight: bold;
   line-height: 32px;
 }
-#kp_come_container #kp_close_popup{
+#yifan_container #yifan_close_popup{
   position: absolute;
   right: 12px; top: 10px;
   cursor: pointer;
   color: #ccc;
 }
-.kp_readmore {
+.yifan_readmore {
   display: block;
   position: absolute;
   left: 0;
