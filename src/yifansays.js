@@ -3,13 +3,9 @@
   $.yifansays = function(options) {
 
     var settings = $.extend({
-        api: 'http://api.kptaipei.tw/v1/category/40?accessToken=kp53f568e77303e9.28212837',
+        source: 'https://rawgit.com/shamenchens/yifanslideshow/gh-pages/src/yifansays.json',
         image: [
           'https://raw.githubusercontent.com/shamenchens/yifanslideshow/gh-pages/img/yifan.png'
-        ],
-        talk: [
-          '我也景仰 rex-san',
-          '番茄醬就是番茄加醬油下去果汁機打'
         ],
         height: 450, // image height
         width: 466, // image width
@@ -142,11 +138,9 @@
   }
 
   function loadData(settings){
-    var posts = {}, says, talk;
-    $.get(settings.api,function(results){
-      // Expected fail
-    }).fail(function() {
-      talk = settings.talk[Math.floor(Math.random()*(settings.talk.length))];
+    var says, talk;
+    $.getJSON(settings.source, function(data) {
+      talk = data.talks[Math.floor(Math.random()*(data.talks.length))];
       says = '<p id="yifan_say_hi" style="color:'+settings.popup_color+'">'+settings.default_text+'<br>'+talk+'</p>';
     }).always(function() {
       $('#yifan_says').scrollTop(0).html(says).promise().done(function(){
