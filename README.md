@@ -4,6 +4,10 @@
 
 [請點擊這裡](http://shamenchens.github.io/yifanslideshow/demo)
 
+[我要投稿讓名言滑出來](https://docs.google.com/forms/d/1suYQNj_hPpVgSURDR0evM-XhDdCR2THc3K81DN-WorQ/viewform)
+
+[一次看完所有名言](https://docs.google.com/spreadsheets/d/149wA5vH2cOQWTjRthjutL5YmS_E6AZ6YcqwPihpSMsU)
+
 
 ## Firefox Addon
 

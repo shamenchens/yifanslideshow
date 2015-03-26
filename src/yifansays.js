@@ -143,7 +143,7 @@
       // Retrieve talks from google spreadsheet: http://goo.gl/6fLH21
       // We only need column B starting from row 2, so we can remove the first two cells,
       // which are the two cells in row 1, and filter out first cell in each row.
-      entry = data.feed.entry.splice(2).filter(function(element, index) {
+      entry = data.feed.entry.slice(2).filter(function(element, index) {
         return index % 2 === 1;
       });
       talk = entry[Math.floor(Math.random()*(entry.length))].content['$t'];
