@@ -3,7 +3,7 @@
   $.yifansays = function(options) {
 
     var settings = $.extend({
-        source: 'https://rawgit.com/shamenchens/yifanslideshow/gh-pages/src/yifansays.json',
+        source: 'https://spreadsheets.google.com/feeds/cells/149wA5vH2cOQWTjRthjutL5YmS_E6AZ6YcqwPihpSMsU/o6wgwqc/public/values?alt=json',
         image: [
           'https://raw.githubusercontent.com/shamenchens/yifanslideshow/gh-pages/img/yifan.png'
         ],
@@ -138,9 +138,15 @@
   }
 
   function loadData(settings){
-    var says, talk;
+    var says, talk, entry;
     $.getJSON(settings.source, function(data) {
-      talk = data.talks[Math.floor(Math.random()*(data.talks.length))];
+      // Retrieve talks from google spreadsheet: http://goo.gl/6fLH21
+      // We only need column B starting from row 2, so we can remove the first two cells,
+      // which are the two cells in row 1, and filter out first cell in each row.
+      entry = data.feed.entry.splice(2).filter(function(element, index) {
+        return index % 2 === 1;
+      });
+      talk = entry[Math.floor(Math.random()*(entry.length))].content['$t'];
       says = '<p id="yifan_say_hi" style="color:'+settings.popup_color+'">'+settings.default_text+'<br>'+talk+'</p>';
     }).always(function() {
       $('#yifan_says').scrollTop(0).html(says).promise().done(function(){
